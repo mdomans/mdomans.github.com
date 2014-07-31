@@ -5,7 +5,7 @@ description: "Python app performance"
 category: programming
 tags: ["python"] 
 ---
-{% include JB/setup %}
+
 
 # How to make your Python web app faster? Part 1: Best practices and basic tools
 
