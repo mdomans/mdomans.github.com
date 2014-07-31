@@ -6,9 +6,9 @@ pygments:         true
 permalink:        pretty
 
 # Setup
-title:            coding me swiftly
+title:            coding swiftly
 tagline:          ''
-description:      'making code elegant by mdomans'
+description:      'making code elegant'
 url:              http://mdomans.github.io
 baseurl:          /
 
