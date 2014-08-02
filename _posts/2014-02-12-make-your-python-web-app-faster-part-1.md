@@ -1,13 +1,10 @@
 ---
 layout: post
-title: "Make your Python web app faster - part 1"
+title: "How to make your Python web app faster? Part 1: Best practices and basic tools"
 description: "Python app performance"
 category: programming
 tags: ["python"] 
 ---
-
-
-# How to make your Python web app faster? Part 1: Best practices and basic tools
 
 Imagine this picture. You just had commited the latest feature request,
 tests are green and you deploy to production server. Suddenly, the unread count of your inbox starts to go up. 
