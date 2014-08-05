@@ -18,24 +18,11 @@ And deep in your heart you know fixing it is going to be painful.
 
 **Should writing fast code be hard?**
 
-Over the last few years I've seen a multitude of performance related problems in web apps written in Python.
-There's lots of noise mixed and usefull information is scattered across multiple sources.
+**Yes. **
 
-This post is the first in a series on making Python web apps fast. 
+Over the last few years I've seen a multitude of performance related problems in web apps written in Python - by which I mean apps that use Python for business logic **(BI)**. 
 
-**What can you expect?**
-
-I'm going to start from the level of function-level applicable practices and then I'll work my way up. I'll be covering approaches to storing data in memcache and there will even be a primer on using 'heavy' solutions such as Varnish to cache whole webapp for a while.
-
-**Is this guide for you?**
-
-It's for every level of craftmanship. People just starting programming will learn best practices and what's possible with Python.
-
-Professional developers will get a comprehensive guide they can refer to anytime. And I hope even the tenured hackers will be able to pick up a trick or two.
-
-**What will I get today?**
-
-In this article you will read about best practices to make your work easier and what's the number one tool you need for performance profiling.
+The problem is that we write **BI** in Python, but there's a database, a webserver and a lot more. Optimizing apps is an art, where sometimes you rewrite and sometimes you cheat.
 
 ## How you can write code for performance
 
@@ -43,7 +30,7 @@ In this article you will read about best practices to make your work easier and 
 
 As a general rule of thumb, never think about performance and write code. 
 
-Usually your code will be performant enough. But, there are cases when you will need to tweak the performance of your code. 
+Usually your code will be performant enough. But, there are cases when you will need to tweak the performance of your code. So…
 
 **How can you write code that's easy to rewrite for performance?**
  
@@ -53,25 +40,20 @@ Here's a few things you should do:
 - Use datastructures  
 - Write tests
 
-Now, why I promised you performance and here I am starting from readable code. Why?. 
-
-When I have to rewrite code for performance reasons, I read the existing code first. The faster I understand what it does, why and where's the problem - the faster I can fix it.  
+When I have to rewrite code for performance reasons, I read the existing code first. The faster I understand what it does, why and where's the problem - the faster I can fix it.  And don't tell me to check specs - they usually do not exist.
 
 That ties in directly to why writing tests is a good practice from performance view. When I make an assumption about the code  - I can be wrong. Tests help me validate my assumptions, since I see whether my new code passes or not.
 
 The guidline I stick to is writing as little new code as possible . Python has terrific standard library and phenomenal collection of battle tested modules written by the community and available via pip.  Don't solve problems someone already solved.
 
 
-## How you should about performance in Python
+## How you should think about performance in Python
 
-I used to make a terrible mistake. 
-Low level languages are fast. So I let myself program in Python the way I did in C, to improve performance. You probably make the same mistake.
+Low level languages are fast. I let myself program in Python the way I did in C, to improve performance. You probably make the same mistake.
 
 C is close to the bare metal. Performance in Python is not about being close to the metal. It's more about choosing the right tool for the job and applying it the right way.
 
-There's no one simple way to have fast Python code. Sometimes you will have to implement an algorithm and sometimes you will have to think about what data you have to process. And yes, sometimes you will use a trick instead of fixing the code.
-
-I hope you like the pursuit of optimal solution that is fast  and other can understand. That's your bread and butter when you work on performance.
+And yes, sometimes you will use a trick instead of fixing the code.
 
 ## Get the swiss army knife of Python profiling
 
@@ -105,9 +87,7 @@ I won't go far into **IPython** in this. Instead, I will recommend the best mate
 
 # Summing up
 
-In this article I've covered ways to make sure your code is crafted well enough to be easy to rewrite for speed or better memory efficiency.
-
-But, **there's a limit to what we can achieve just in Python**. 
+**There's a limit to what we can achieve just in Python**. 
 
 Next articles will focus on that. What you can do, when you need more performance and there's just now way to make your code any faster just by utilizing traditional approaches.
 
