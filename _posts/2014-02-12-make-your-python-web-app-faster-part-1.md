@@ -9,7 +9,7 @@ tags: ["python"]
 Imagine this picture. You just had commited the latest feature request,
 tests are green and you deploy to production server. Suddenly, the unread count of your inbox starts to go up. 
 
-One, two and then twenty emails from your server monitoring. Your website is timeouting like crazy.
+One, two and then twenty emails from your server monitoring. Your website is time outing like crazy.
 Hackers? No, the server is ok, traffic isn't that bad. 
 Bug? But the tests are ok.
 
@@ -20,13 +20,17 @@ And deep in your heart you know fixing it is going to be painful.
 
 **Yes, it should.**
 
-Over the last few years I've seen a multitude of performance related problems in web apps written in Python - by which I mean apps that use Python for business logic **(BI)**. 
+We focus on optimising Python, we use it for business logic **(BL)** only. 
 
-The problem is that we write **BI** in Python, but there's a database, a webserver and a lot more. Optimizing apps is an art, where sometimes you rewrite and sometimes you cheat.
+But a typical app architecture usually looks like this:
+
+![Actual app arch](/public/app_arch.png)
+
+The problem is that only write **BL** in Python, but there's a database, a web server and a lot more. Optimising apps is an art, where sometimes you rewrite and sometimes you cheat.
 
 ## How you can write code for performance
 
-> "We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil" Donald Knuth
+> "We should forget about small efficiencies, say about 97% of the time: premature optimisation is the root of all evil" **Donald Knuth**
 
 As a general rule of thumb, never think about performance and write code. 
 
@@ -44,7 +48,7 @@ When I have to rewrite code for performance reasons, I read the existing code fi
 
 That ties in directly to why writing tests is a good practice from performance view. When I make an assumption about the code  - I can be wrong. Tests help me validate my assumptions, since I see whether my new code passes or not.
 
-The guidline I stick to is writing as little new code as possible . Python has terrific standard library and phenomenal collection of battle tested modules written by the community and available via pip.  Don't solve problems someone already solved.
+The guideline I stick to is writing as little new code as possible . Python has terrific standard library and phenomenal collection of battle tested modules written by the community and available via pip.  Don't solve problems someone already solved.
 
 
 ## How you should think about performance in Python
@@ -55,10 +59,10 @@ C is close to the bare metal. Performance in Python is not about being close to 
 
 And yes, sometimes you will use a trick instead of fixing the code.
 
-## Get the swiss army knife of Python profiling
+## The swiss army knife of Python profiling
 
 Code is still not fast enough? Use **IPython**. With the recent premier of the 2.0
-version IPython is the most powerfull tool I know for performance focused work (and Python programming in general). 
+version IPython is the most powerful tool I know for performance focused work (and Python programming in general). 
 It gives you:
 
 - Code completion and ability to prototype code
@@ -89,7 +93,7 @@ I won't go far into **IPython** in this. Instead, I will recommend the best mate
 
 **There's a limit to what we can achieve just in Python**. 
 
-Next articles will focus on that. What you can do, when you need more performance and there's just now way to make your code any faster just by utilizing traditional approaches.
+Next articles will focus on that. What you can do, when you need more performance and there's just now way to make your code any faster just by utilising traditional approaches.
 
 
 
