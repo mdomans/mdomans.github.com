@@ -18,7 +18,7 @@ And deep in your heart you know fixing it is going to be painful.
 
 **Should writing fast code be hard?**
 
-**Yes. **
+**Yes, it should.**
 
 Over the last few years I've seen a multitude of performance related problems in web apps written in Python - by which I mean apps that use Python for business logic **(BI)**. 
 
