@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: about
 ---
 
 Written, edited and maintained by [mdomans](http://github.com/mdomans)
